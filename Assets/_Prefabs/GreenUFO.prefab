@@ -17,7 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4197385765632737507, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
       propertyPath: m_Name
-      value: GreenUFO Variant
+      value: GreenUFO
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197385765632737507, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: m_TagString
+      value: Target
       objectReference: {fileID: 0}
     - target: {fileID: 4197385765632737518, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
       propertyPath: m_RootOrder
@@ -63,5 +67,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: nextTier
+      value: 
+      objectReference: {fileID: 6296963746302057425, guid: c378994a4496973449573832be342ee8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}

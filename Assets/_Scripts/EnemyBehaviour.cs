@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private Transform[] waypoints;
     private int currentWaypointIndex;
+    [SerializeField] private GameObject nextTier;
 
     private void Start()
     {
@@ -25,7 +26,6 @@ public class EnemyBehaviour : MonoBehaviour
             float distanceToWaypoint = Vector3.Distance(transform.position, new Vector3(waypoints[currentWaypointIndex].transform.position.x, waypoints[currentWaypointIndex].transform.position.y, 0));
             if(distanceToWaypoint > stoppingDistance)
             {
-                Vector3 moveDirection = (new Vector3(targetPosition.x, targetPosition.y, 0) - transform.position).normalized;
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPosition.x, targetPosition.y, 0), moveSpeed * Time.fixedDeltaTime);
             }
             else

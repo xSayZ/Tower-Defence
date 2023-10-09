@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedUFO
       objectReference: {fileID: 0}
+    - target: {fileID: 4197385765632737507, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: m_TagString
+      value: Target
+      objectReference: {fileID: 0}
     - target: {fileID: 4197385765632737518, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -65,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
       propertyPath: moveSpeed
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}

@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurpleUFO
       objectReference: {fileID: 0}
+    - target: {fileID: 4197385765632737507, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: m_TagString
+      value: Target
+      objectReference: {fileID: 0}
     - target: {fileID: 4197385765632737518, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -63,5 +67,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: nextTier
+      value: 
+      objectReference: {fileID: 6242026737171958525, guid: 114ffcb8923f5504ebb24d2d13ff9078, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
