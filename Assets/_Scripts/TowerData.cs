@@ -4,8 +4,10 @@ using UnityEngine;
 public class TowerData : ScriptableObject
 {
     public int cost;
-    public float damage;
+    public int damage;
     public float range;
+    public float attackSpeed;
+    
     public GameObject towerPrefab;
     public int numberOfProjectiles;
     public float splashRadius;

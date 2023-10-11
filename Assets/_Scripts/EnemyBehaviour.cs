@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float stoppingDistance = 0.1f;
+    [SerializeField] private Sprite[] nextTier;
+    [SerializeField] private float moveSpeed = 5f;
+    private float stoppingDistance = 0.1f;
+
+    [SerializeField] public int health;
 
     private Transform[] waypoints;
     private int currentWaypointIndex;
-    [SerializeField] private GameObject nextTier;
+
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
 
     private void Start()
     {
@@ -21,12 +30,16 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if(currentWaypointIndex < waypoints.Length)
         {
-            Vector2 targetPosition = waypoints[currentWaypointIndex].transform.position;
+            Vector3 targetPosition = waypoints[currentWaypointIndex].position;
+            Vector3 currentPosition = transform.position;
 
-            float distanceToWaypoint = Vector3.Distance(transform.position, new Vector3(waypoints[currentWaypointIndex].transform.position.x, waypoints[currentWaypointIndex].transform.position.y, 0));
-            if(distanceToWaypoint > stoppingDistance)
+            float distanceToWaypoint = Vector3.Distance(currentPosition, targetPosition);
+
+            if (distanceToWaypoint > stoppingDistance)
             {
-                transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPosition.x, targetPosition.y, 0), moveSpeed * Time.fixedDeltaTime);
+                // Calculate the movement direction and normalize it
+                Vector3 moveDirection = (targetPosition - currentPosition).normalized;
+                transform.position += moveDirection * moveSpeed * Time.fixedDeltaTime;
             }
             else
             {
@@ -34,10 +47,31 @@ public class EnemyBehaviour : MonoBehaviour
 
                 if(currentWaypointIndex >= waypoints.Length)
                 {
-                    GameManager.GetInstance().UnregisterEnemy(this);
-                    Destroy(gameObject);
+                    Destroy();
                 }
             }
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Destroy();
+        }
+        else
+        {
+            spriteRenderer.sprite = nextTier[health - 1];
+        }
+    }
+
+    void Destroy()
+    {
+        EventManager.OnGameobjectChange.Invoke(gameObject);
+        Debug.Log("Destroying " + gameObject);
+        GameManager.GetInstance().UnregisterEnemy(this);
+        Destroy(gameObject);
     }
 }

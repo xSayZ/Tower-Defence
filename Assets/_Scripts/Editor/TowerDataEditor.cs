@@ -37,8 +37,9 @@ public class TowerDataEditor : Editor
 
         // Display other properties
         towerData.cost = EditorGUILayout.IntField("Cost", towerData.cost);
-        towerData.damage = EditorGUILayout.FloatField("Damage", towerData.damage);
+        towerData.damage = EditorGUILayout.IntField("Damage", towerData.damage);
         towerData.range = EditorGUILayout.FloatField("Range", towerData.range);
+        towerData.attackSpeed = EditorGUILayout.FloatField("Attack Speed", towerData.attackSpeed);
         towerData.numberOfProjectiles = EditorGUILayout.IntField("Number of Projectiles", towerData.numberOfProjectiles);
         towerData.splashRadius = EditorGUILayout.FloatField("Splash Radius", towerData.splashRadius);
 

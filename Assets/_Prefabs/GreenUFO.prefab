@@ -68,8 +68,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
       propertyPath: nextTier
       value: 
-      objectReference: {fileID: 6296963746302057425, guid: c378994a4496973449573832be342ee8, type: 3}
+      objectReference: {fileID: 21300000, guid: 88fbc567acde8214bb81f1a0e2c99f00, type: 3}
+    - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: nextTier.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783510956894980419, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}
+      propertyPath: nextTier.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 88fbc567acde8214bb81f1a0e2c99f00, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014832711aca9fc4e9a27514dd68c970, type: 3}

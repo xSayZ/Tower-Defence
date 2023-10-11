@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 793823b92e4a83842bbf897f4f187c87, type: 3}
-  m_Name: Sniper Tower
+  m_Name: Red Tower
   m_EditorClassIdentifier: 
-  cost: 0
-  damage: 0
-  range: 0
-  towerPrefab: {fileID: 0}
+  cost: 200
+  damage: 1
+  range: 20
+  attackSpeed: 2
+  towerPrefab: {fileID: 4766033801590744789, guid: 7a5f5938e27228c4693bd06ad5dd9e7b, type: 3}
   numberOfProjectiles: 0
   splashRadius: 0
